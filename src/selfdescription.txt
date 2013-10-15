@@ -1,4 +1,4 @@
-﻿
+
 modularized development:
 =======================
 |---->	software
@@ -7,7 +7,7 @@ modularized development:
 |		|----protocol layer
 |
 |---->	hardware driver
-|		|---->	function layer
+|		|---->	device function layer
 |		|
 |		|---->	device layer
 |		|

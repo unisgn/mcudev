@@ -1,4 +1,4 @@
-﻿
+
 #ifndef __TYPES_H__
 #define __TYPES_H__
 
@@ -14,9 +14,6 @@ typedef unsigned char uint8_t;
 typedef unsigned char UINT8_t;
 typedef unsigned char byte;
 typedef unsigned char BYTE;
-
-typedef unsigned char _BOOL;
-#define _BOOL bool;
 
 typedef int int16;
 typedef int INT16;
@@ -37,5 +34,17 @@ typedef unsigned long uint32;
 typedef unsigned long UINT32;
 typedef unsigned long uint32_t;
 typedef unsigned long UINT32_t;
+
+
+typedef unsigned char _BOOL;
+#define _BOOL bool
+#define true 1
+#define false 0
+#define __bool_true_false_are_defined 1
+
+#ifndef NULL
+#define NULL (void*)0
+#endif
+
 
 #endif

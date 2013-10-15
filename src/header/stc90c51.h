@@ -1,4 +1,4 @@
-﻿
+
 #ifndef __STC90C51_H__
 #define __STC90C51_H__
 #include <reg51.h>

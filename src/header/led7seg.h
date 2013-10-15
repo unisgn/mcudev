@@ -1,4 +1,4 @@
-﻿#ifndef __LED7SEG_H__
+#ifndef __LED7SEG_H__
 #define __LED7SEG_H__
 #include <stc90c51.h>
 #define LED7SEG P0

@@ -14,7 +14,7 @@ static uint32_t power(uint8_t number, uint8_t pow)
 {
 	return (uint32_t) (!pow) ? 1 : (uint32_t) number * power(number, pow - 1);
 }
-static uint8_t get_digit_of_number(uint32_t number, uint8_t digit)
+static uint8_t get_digit_value_of_number(uint32_t number, uint8_t digit)
 {
 	return (uint8_t) ((number % power(10, digit + 1)) / power(10, digit));
 }
@@ -22,5 +22,5 @@ void display_number(uint32_t number)
 {
 	uint8_t i;
 	for(i = 0; i < 8; i++) 
-		display_digit(i, get_digit_of_number(number, i));
+		display_digit(i, get_digit_value_of_number(number, i));
 }

@@ -1,4 +1,4 @@
-﻿#ifndef __SOFT_I2C_H__
+#ifndef __SOFT_I2C_H__
 #define __SOFT_I2C_H__
 #include <stc90c51.h>
 

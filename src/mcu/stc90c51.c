@@ -1,4 +1,4 @@
-﻿#include <stc90c51.h>
+#include <stc90c51.h>
 #include <intrins.h>
 //static void uart_init(void)
 //{
