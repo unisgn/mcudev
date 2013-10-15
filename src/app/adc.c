@@ -1,26 +1,13 @@
-#include <mcu.h>
-#include "adc.h"
+#include <pcf8591.h>
+#include "main.h"
 
-uint8_t read_adc(uint8_t ch)
+#define SAMPLING_SIZE 3
+
+byte adc_read_analog(uint8_t channel)
 {
-	uint8_t ret;
-	soft_i2c_start();
-	soft_i2c_write_byte(ADC_WRITE);
-	if(soft_i2c_nack)
-		return 0;
-		
-	soft_i2c_write_byte(ADC_CH_BASE | ch);
-	if(soft_i2c_nack)
-		return 0;
-		
-	soft_i2c_start();
-	soft_i2c_write_byte(ADC_READ);
-	if(soft_i2c_nack)
-		return 0;
-		
-	ret = soft_i2c_read_byte();
-	soft_i2c_write_nack();
-	soft_i2c_stop();
-	
-	return ret;
+    uint8_t i = (1 << SAMPLING_SIZE);
+    uint16_t sample_dat_sum = 0;
+    while(i--)
+        sample_dat_sum += pcf8591_read_analog(channel);
+    return (byte)(sample_dat_sum >> SAMPLING_SIZE);
 }
