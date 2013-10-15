@@ -1,0 +1,15 @@
+﻿
+modularized development:
+=======================
+|---->	software
+|		|----application layer
+|		|
+|		|----protocol layer
+|
+|---->	hardware driver
+|		|---->	function layer
+|		|
+|		|---->	device layer
+|		|
+|		|---->	physical layer
+========================
