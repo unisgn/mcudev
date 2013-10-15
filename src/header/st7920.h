@@ -1,6 +1,6 @@
 #ifndef __ST7920_H__
 #define __ST7920_H__
-#include <stc90c51.h>
+#include <mcu.h>
 #include <soft_i2c.h>
 
 sbit RST = P0^1;

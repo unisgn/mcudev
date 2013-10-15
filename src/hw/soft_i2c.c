@@ -1,6 +1,7 @@
+#include <mcu.h>
 #include <soft_i2c.h>
-sbit SDA = P2^0;
-sbit SCL = P2^1;
+
+bool soft_i2c_nack;
 
 void soft_i2c_start(void)
 {

@@ -1,8 +1,11 @@
 #ifndef __SOFT_I2C_H__
 #define __SOFT_I2C_H__
-#include <stc90c51.h>
-extern bool soft_i2c_nack;
+#include <mcu.h>
 
+sbit SDA = P2^0;
+sbit SCL = P2^1;
+
+extern bool soft_i2c_nack;
 
 #define SET_SCL() do { SCL = 1; } while(0)
 #define CLR_SCL() do { SCL = 0; } while(0)

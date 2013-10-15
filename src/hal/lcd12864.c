@@ -1,11 +1,8 @@
-#include <stc90c51.h>
+#include <mcu.h>
 #include <lcd12864.h>
 #include <lcd_i2c.h>
 #include <intrins.h>
 
-sbit CS = P0^0;
-sbit RST = P0^1;
-sbit RS = P2^5;
 
 
 static void lcd_wcmd(byte cmd)

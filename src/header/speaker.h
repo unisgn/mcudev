@@ -1,6 +1,6 @@
 #ifndef __SPEAKER_H__
 #define __SPEAKER_H__
-#include <reg52.h>
+#include <mcu.h>
 
 sbit SPK = P1^2;
 

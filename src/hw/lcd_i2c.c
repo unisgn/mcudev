@@ -1,8 +1,7 @@
-#include <stc90c51.h>
+#include <mcu.h>
 #include <lcd_i2c.h>
 #include <intrins.h>
-sbit SCL = P2^6;
-sbit SDA = P2^7;
+
 
 void lcd_i2c_write_byte(byte dat)
 {

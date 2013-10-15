@@ -1,6 +1,6 @@
 #ifndef __LED7SEG_H__
 #define __LED7SEG_H__
-#include <stc90c51.h>
+#include <mcu.h>
 #define LED7SEG P0
 
 #define LED7SEG_DISP(char_code_index) do { LED7SEG = led7seg_char_code[char_code_index] ;} while(0)

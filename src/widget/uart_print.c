@@ -1,4 +1,4 @@
-#include <reg52.h>
+#include <mcu.h>
 
 char putchar(char c)
 {

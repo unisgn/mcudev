@@ -1,4 +1,4 @@
-#include <stc90c51.h>
+#include <mcu.h>
 #include "lcd_disp.h"
 #include "led7seg_ls138.h"
 #include "adc.h"

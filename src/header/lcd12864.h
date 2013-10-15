@@ -1,9 +1,13 @@
 #ifndef __LCD12864_H__
 #define __LCD12864_H__
-#include <stc90c51.h>
+#include <reg51.h>
+#include <types.h>
 #define LCD_CHAR_FWIDTH 16
 #define LCD_CHAR_HWIDTH (LCD_CHAR_FWIDTH >> 1)
 
+sbit CS = P0^0;
+sbit RST = P0^1;
+sbit RS = P2^5;
 
 
 #define SET_RST() do { RST = 1; } while(0)

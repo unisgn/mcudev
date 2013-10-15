@@ -1,6 +1,6 @@
 #ifndef __LS138_H__
 #define __LS138_H__
-#include <stc90c51.h>
+#include <mcu.h>
 
 sbit LS138A = P2^2;
 sbit LS138B = P2^3;

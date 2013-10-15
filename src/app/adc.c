@@ -1,6 +1,5 @@
+#include <mcu.h>
 #include "adc.h"
-
-bool soft_i2c_nack;
 
 uint8_t read_adc(uint8_t ch)
 {

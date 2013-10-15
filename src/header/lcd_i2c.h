@@ -1,6 +1,9 @@
 #ifndef __SOFT_I2C_H__
 #define __SOFT_I2C_H__
-#include <stc90c51.h>
+#include <mcu.h>
+
+sbit SCL = P2^6;
+sbit SDA = P2^7;
 
 #define SET_SCL() do { SCL = 1; } while(0)
 #define CLR_SCL() do { SCL = 0; } while(0)

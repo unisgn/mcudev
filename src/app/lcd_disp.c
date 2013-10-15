@@ -1,5 +1,5 @@
 
-#include <stc90c51.h>
+#include <mcu.h>
 #include <lcd12864.h>
 #include "lcd_disp.h"
 

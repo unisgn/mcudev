@@ -1,6 +1,6 @@
 #ifndef __ADC_H__
 #define __ADC_H__
-#include <stc90c51.h>
+#include <mcu.h>
 #include <soft_i2c.h>
 #define ADC_WRITE 	0x90
 #define ADC_READ	0x91
