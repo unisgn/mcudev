@@ -1,7 +1,7 @@
 #include <ls138.h>
 void ls138_encode(uint8_t num)
 {
-	if( num >= 0 && num < 8) {
+	if(num < 8) {
 		LS138A = (num & (1 << 0)) ? 1 : 0;
 		LS138B = (num & (1 << 1)) ? 1 : 0;
 		LS138C = (num & (1 << 2)) ? 1 : 0;
