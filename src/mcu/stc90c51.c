@@ -1,4 +1,4 @@
-#include <stc90c51.h>
+﻿#include <stc90c51.h>
 #include <intrins.h>
 //static void uart_init(void)
 //{
@@ -18,22 +18,49 @@ void sys_delay_5us(uint8_t n)
 		_nop_();
 	}
 }
-void sys_delay_50us(uchar n)
+void sys_delay_1ms(uint8_t n)
 {
-	uint8_t i = 50;
+	uint8_t i;
 	while(n--)
-		while(i--);
+		for(i = 0; i < 200; i++) {
+			_nop_();
+			_nop_();
+			_nop_();
+			_nop_();
+			_nop_();
+		}
 		
 }
-//void sys_delay_50ms(uint8_t n)
-//{
-//	uint8_t i = n, j = 250, k = 200;
-//	while(i--)
-//		while(j--)
-//			while(k--);
-//}
 
-//void sys_init(void)
-//{
-//	uart_init();
-//}
+void sys_delay_1s(uint8_t n)
+{
+	uint8_t i, j;
+	while(n--) {
+		for(i = 0; i < 250; i++)
+			for(j = 0; j < 250; j++) {
+				_nop_();
+				_nop_();
+				_nop_();
+				_nop_();
+				_nop_();
+				_nop_();
+				_nop_();
+				_nop_();
+				_nop_();
+				_nop_();
+				_nop_();
+				_nop_();
+				_nop_();
+				_nop_();
+				_nop_();
+				_nop_();
+			}
+	}
+}
+
+
+/* void sys_init(void)
+{
+	uart_init();
+} */
+

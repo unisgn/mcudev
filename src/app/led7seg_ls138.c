@@ -5,17 +5,18 @@
 static void display_digit(uint8_t digit, uint8_t number)
 {
 	ls138_encode(7 - digit);
-	LED7SEG = led7seg_char_code[number];
-	sys_delay_50us(1);
+	if(number < 15)
+		LED7SEG = led7seg_char_code[number];
+	sys_delay_1us(50);
 }
 
 static uint32_t power(uint8_t number, uint8_t pow)
 {
-	return (!pow) ? 1 : number * power(number, pow - 1);
+	return (uint32_t) (!pow) ? 1 : (uint32_t) number * power(number, pow - 1);
 }
 static uint8_t get_digit_of_number(uint32_t number, uint8_t digit)
 {
-	return (uint8_t)((number%power(10, digit + 1))/power(10, digit));
+	return (uint8_t) ((number % power(10, digit + 1)) / power(10, digit));
 }
 void display_number(uint32_t number)
 {

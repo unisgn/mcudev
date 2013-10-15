@@ -19,6 +19,6 @@ void lcd_disp(void)
 	lcd_init();
 	for(i = 0; i < 2; i++)
 		lcd_disp_char(i, 0, LCD_CHAR_FWIDTH, char_code_tab[i]);
-	sys_delay_50us(200);
+	sys_delay_1s(2);
 	lcd_clr_screen();
 }

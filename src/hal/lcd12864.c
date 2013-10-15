@@ -24,21 +24,7 @@ static void lcd_wdat(byte dat)
 	SET_CS();
 }
 
-static void lcd_delay(uint8_t n)
-{
-	uint8_t i, j;
-	for(i = 0; i < n; i++){
-		for(j = 0; j < 200; j++) {
-			_nop_();
-			_nop_();
-			_nop_();
-			_nop_();
-			_nop_();
-		}
-	}
-}
-
-static void lcd_fill(uint8_t dat)
+static void lcd_fill_screen(uint8_t dat)
 {
 	uint8_t i, j;
 	for(i = 0; i < 8; i++) {
@@ -54,11 +40,11 @@ static void lcd_fill(uint8_t dat)
 void lcd_init(void)
 {
 	SET_RST();
-	lcd_delay(20);
+	sys_delay_1ms(20);
 	CLR_RST();
-	lcd_delay(20);
+	sys_delay_1ms(20);
 	SET_RST();
-	lcd_delay(20);
+	sys_delay_1ms(20);
 	CLR_CS();
 	
 	lcd_wcmd(0xE2);          //Software Reset
@@ -77,7 +63,7 @@ void lcd_init(void)
 	lcd_wcmd(0x2F);    
 	lcd_wcmd(0x2F);
 	
-	lcd_delay(40);
+	sys_delay_1ms(40);
 	lcd_wcmd(0x40);
 	lcd_wcmd(0xAF);
 	
@@ -87,9 +73,9 @@ void lcd_init(void)
 void lcd_clr_screen(void)
 {
 	// fill with 0xFF to clear white;
-	lcd_fill(0xFF);
+	lcd_fill_screen(0xFF);
 	// fill with 0x00 to clear black;
-	lcd_fill(0x00);
+	lcd_fill_screen(0x00);
 }
 
 void lcd_disp_char(uint8_t X, uint8_t Y, uint8_t _size, uchar* strptr)
