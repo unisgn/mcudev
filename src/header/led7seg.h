@@ -3,17 +3,18 @@
 #include <stc90c51.h>
 #define LED7SEG P0
 
+#define LED7SEG_DISP(char_code_index) do { LED7SEG = led7seg_char_code[char_code_index] ;} while(0)
 /*
-		  A	
-		 ____
-	F	| 	 |  B
-		|_G__|
-	E	|	 |  C
-		|____|o DP
-		   D
-		   
-	SEG:	A	B	C	D	E	F	G	DP
-	DIG:	0	1	2	3	4	5	6	7	
+          A
+        ____
+    F  |    |  B
+       |_G__|
+    E  |    |  C
+       |____| o  DP
+          D
+          
+    SEG: A   B   C   D   E   F   G   DP
+    DIG: 0   1   2   3   4   5   6   7
 */
 
 extern uchar code led7seg_char_code[16] = {

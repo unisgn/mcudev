@@ -2,25 +2,33 @@
 #include <ls138.h>
 #include <led7seg.h>
 
-static void display_digit(uint8_t digit, uint8_t number)
+#define NUM_SYS_RADIX 10
+#define LED_ARRAY_QTY 8
+
+static void display_digit(uint8_t digit_index, uint8_t digit)
 {
-	ls138_encode(7 - digit);
-	if(number < 15)
-		LED7SEG = led7seg_char_code[number];
-	sys_delay_1us(50);
+	
+	if(digit < NUM_SYS_RADIX) {
+        ls138_encode(LED_ARRAY_QTY - 1 - digit_index);
+		LED7SEG_DISP(digit);
+        sys_delay_5us(10);
+    }
 }
 
 static uint32_t power(uint8_t number, uint8_t pow)
 {
 	return (uint32_t) (!pow) ? 1 : (uint32_t) number * power(number, pow - 1);
 }
-static uint8_t get_digit_value_of_number(uint32_t number, uint8_t digit)
+
+static uint8_t get_digit(uint32_t number, uint8_t digit_index)
 {
-	return (uint8_t) ((number % power(10, digit + 1)) / power(10, digit));
+	return (uint8_t) ((number % power(NUM_SYS_RADIX, digit_index + 1)) / power(NUM_SYS_RADIX, digit_index));
 }
+
 void display_number(uint32_t number)
 {
 	uint8_t i;
-	for(i = 0; i < 8; i++) 
-		display_digit(i, get_digit_value_of_number(number, i));
+    for(i = 0; i < LED_ARRAY_QTY; i++) 
+        display_digit(i, get_digit(number, i));
+
 }
