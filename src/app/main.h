@@ -1,3 +1,4 @@
 #include <mcu.h>
-#include "adc.h"
-#include "led7seg_ls138.h"
+#include <nrf24l01.h>
+#include <nrf24l01_2.h>
+#include <stdio.h>

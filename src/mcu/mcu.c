@@ -1,12 +1,12 @@
 #include <mcu.h>
 #include <intrins.h>
-//static void uart_init(void)
-//{
-//	SCON = 0x50;
-//	TMOD |= 0x20;
-//	TH1 = 0xFD;		// xtal = 11059200Hz, baudrate = 9600bps;
-//	TR1 = 1;
-//}
+static void uart_init(void)
+{
+	SCON = 0x50;
+	TMOD |= 0x20;
+	TH1 = 0xFD;		// xtal = 11059200Hz, baudrate = 9600bps;
+	TR1 = 1;
+}
 
 void sys_delay_5us(uint8_t n)
 {
@@ -59,8 +59,8 @@ void sys_delay_1s(uint8_t n)
 }
 
 
-/* void sys_init(void)
+void sys_init(void)
 {
 	uart_init();
-} */
+}
 
