@@ -28,8 +28,8 @@ static uint8_t get_digit(uint32_t number, uint8_t digit_index)
 
 void display_number(uint32_t number)
 {
-	uint8_t i;
-    for(i = 0; i < LED_ARRAY_QTY; i++) 
+    uint8_t i = 0;
+    while(i++ < LED_ARRAY_QTY) 
         display_digit(i, get_digit(number, i));
 
 }
