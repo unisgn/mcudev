@@ -63,6 +63,7 @@ static void nrf_config(void)
 
 void nrf24l01_init(void)
 {
+	sys_delay_1ms(15);		//delay for power on reset;
     CE = 0;
     CSN = 1;
     SCK = 0;
@@ -73,17 +74,15 @@ void nrf24l01_set_ptx_mode(void)
 {
     CE = 0;
     nrf_write_reg(W_REGISTER + CONFIG, 0x0E);    
-    sys_delay_1ms(5);    
     CE = 1;
     sys_delay_5us(4);
 }
 
-void nrf24l01_set_prx_mode(uchar* rx_addr)
+void nrf24l01_set_prx_mode(uchar* local_ip)
 {
     CE = 0;
-    nrf_write_buf(W_REGISTER + RX_ADDR_P0, rx_addr, RX_ADDR_WIDTH);
+    nrf_write_buf(W_REGISTER + RX_ADDR_P0, local_ip, RX_ADDR_WIDTH);
     nrf_write_reg(W_REGISTER + CONFIG, 0x0F);
-    sys_delay_1ms(5);
     CE = 1;
     sys_delay_5us(4);
 }
@@ -103,12 +102,12 @@ void nrf24l01_clear_irq(void)
     CE = 1;
 }
 
-void nrf24l01_tx_packet(byte* tx_addr, byte* tx_buf)
+void nrf24l01_tx_packet(byte* target_node_ip, byte* tx_buf)
 {
 	CE = 0;
     
-    nrf_write_buf(W_REGISTER + TX_ADDR, tx_addr, TX_ADDR_WIDTH);
-	nrf_write_buf(W_REGISTER + RX_ADDR_P0, tx_addr, TX_ADDR_WIDTH);  
+    nrf_write_buf(W_REGISTER + TX_ADDR, target_node_ip, TX_ADDR_WIDTH);
+	nrf_write_buf(W_REGISTER + RX_ADDR_P0, target_node_ip, TX_ADDR_WIDTH);  
     nrf_write_buf(W_TX_PAYLOAD, tx_buf, TX_PLOAD_WIDTH);
 
     CE = 1;
