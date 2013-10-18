@@ -1,3 +1,3 @@
 μController development.
 
-and HACKING WELCOME.
+and FREE HACKING.
