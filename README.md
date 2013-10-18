@@ -1,3 +1,3 @@
 μController development.
 
-and HACKING AT WILL.
+and hacking at will.
