@@ -15,10 +15,10 @@ static uchar* char_code_tab[2] = {(uchar*)cc_shen, (uchar*)cc_zhou};
 
 void lcd_disp(void)
 {
-	uint8_t i;
-	lcd_init();
-	for(i = 0; i < 2; i++)
-		lcd_disp_char(i, 0, LCD_CHAR_FWIDTH, char_code_tab[i]);
-	sys_delay_1s(2);
-	lcd_clr_screen();
+    uint8_t i;
+    lcd_init();
+    for(i = 0; i < 2; i++)
+        lcd_disp_char(i, 0, LCD_CHAR_FWIDTH, char_code_tab[i]);
+    sys_delay_1s(2);
+    lcd_clr_screen();
 }

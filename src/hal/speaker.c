@@ -3,9 +3,9 @@
 
 void sys_beep(void)
 {
-	uint16_t i = 300;
-	while(i--) {
-		SPK = ~SPK;
-		sys_delay_5us(40);
-	}
+    uint16_t i = 300;
+    while(i--) {
+        SPK = ~SPK;
+        sys_delay_5us(40);
+    }
 }

@@ -1,6 +1,6 @@
 
-#ifndef __STC90C51_H__
-#define __STC90C51_H__
+#ifndef __MCU_H__
+#define __MCU_H__
 #include <reg51.h>
 #include <types.h>
 

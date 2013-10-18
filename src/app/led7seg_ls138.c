@@ -1,7 +1,7 @@
 #include <mcu.h>
-#include "led7seg_ls138.h"
 #include <ls138.h>
 #include <led7seg.h>
+#include "led7seg_ls138.h"
 
 #define NUM_SYS_RADIX 10
 #define LED_ARRAY_QTY 8
@@ -22,13 +22,13 @@ static uint32_t power(uint8_t number, uint8_t pow)
 
 static uint8_t get_digit(uint32_t number, uint8_t digit_index)
 {
-	return (uint8_t) ((number % power(NUM_SYS_RADIX, digit_index + 1)) / power(NUM_SYS_RADIX, digit_index));
+    return (uint8_t) ((number % power(NUM_SYS_RADIX, digit_index + 1)) / power(NUM_SYS_RADIX, digit_index));
 }
 
 void display_number(uint32_t number)
 {
-    uint8_t i = 0;
-    while(i++ < LED_ARRAY_QTY) 
+    uint8_t i;
+    for(i = 0; i < LED_ARRAY_QTY; i++)
         display_digit(i, get_digit(number, i));
 
 }
