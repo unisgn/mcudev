@@ -17,7 +17,7 @@ sbit IRQ    = P1^3;
 extern void nrf24l01_init(void);
 extern byte nrf24l01_get_status(void);
 extern void nrf24l01_clear_irq(void);
-extern void nrf24l01_set_ptx_mode();
+extern void nrf24l01_set_ptx_mode(void);
 extern void nrf24l01_set_prx_mode(uchar* rx_addr);
 extern void nrf24l01_tx_packet(uchar* tx_addr, uchar* tx_pld);
 extern void nrf24l01_rx_packet(uchar* rx_pld);

@@ -1,4 +1,14 @@
+/*
+ * @file: ls138.c
+ * @desc: 74HC138 3-to-8 line decoder driver 
+ */
 #include <ls138.h>
+
+/*
+ * @function ls138_encode
+ * @desc: set up the 3 input H/L level to encode a decimal integer number in [0, 8).
+ * 
+ */
 void ls138_encode(uint8_t num)
 {
     if(num < 8) {
@@ -8,7 +18,7 @@ void ls138_encode(uint8_t num)
     }
 }
 
-// uint8_t ls138_decode(void)
-// {
-    // return ((uint8_t)LS138A + ((uint8_t)LS138B) << 1 + ((uint8_t)LS138C) << 2);
-// }
+/* uint8_t ls138_decode(void) */
+/* { */
+/*     return ((uint8_t)LS138A + ((uint8_t)LS138B) << 1 + ((uint8_t)LS138C) << 2); */
+/* } */
