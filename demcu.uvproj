@@ -31,9 +31,9 @@
           <SLE66LinkerMisc></SLE66LinkerMisc>
           <SFDFile></SFDFile>
           <bCustSvd>0</bCustSvd>
-          <UseEnv>1</UseEnv>
-          <BinPath>D:\Program Files (x86)\Keil\C51\BIN\</BinPath>
-          <IncludePath>E:\github\mcudev\src\header</IncludePath>
+          <UseEnv>0</UseEnv>
+          <BinPath></BinPath>
+          <IncludePath></IncludePath>
           <LibPath></LibPath>
           <RegisterFilePath></RegisterFilePath>
           <DBRegisterFilePath>Atmel\</DBRegisterFilePath>
@@ -305,7 +305,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\src\header</IncludePath>
             </VariousControls>
           </C51>
           <Ax51>

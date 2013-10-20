@@ -1,13 +1,13 @@
-/*
+/**
  * @file: soft_spi.c
  * @author:
  * @date:
  * @version:
- * @desc: soft spi simulation driver
+ * @brief: soft spi simulation driver
  */
 #include <soft_spi.h>
 
-/*
+/**
  * @function: soft_spi_rw
  * @desc: write a byte of data to slave device, meanwhile read a byte from slave
  * device.

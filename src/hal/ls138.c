@@ -1,10 +1,10 @@
-/*
+/**
  * @file: ls138.c
  * @desc: 74HC138 3-to-8 line decoder driver 
  */
 #include <ls138.h>
 
-/*
+/**
  * @function ls138_encode
  * @desc: set up the 3 input H/L level to encode a decimal integer number in [0, 8).
  * 

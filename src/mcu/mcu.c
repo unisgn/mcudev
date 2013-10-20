@@ -1,9 +1,9 @@
-/*
+/**
  * @file: mcu.c
  * @author
  * @date
  * @version
- * @desc: setup mcu specific functions and basic system environment, provide
+ * @brief: setup mcu specific functions and basic system environment, provide
  * system wide interface.
  */
 #include <mcu.h>

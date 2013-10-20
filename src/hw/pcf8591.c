@@ -1,9 +1,9 @@
-/*
+/**
  * @file: pcf8591.c
  * @author
  * @date
  * @version
- * @desc: 8-bit ADC PCF8591 driver, I2C commucation protocol, use soft_i2c
+ * @brief: 8-bit ADC PCF8591 driver, I2C commucation protocol, use soft_i2c
  * simulation driver.
  */
 #include <pcf8591.h>

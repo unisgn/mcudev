@@ -16,7 +16,7 @@
           D
           
     SEG: A   B   C   D   E   F   G   DP
-    DIG: 0   1   2   3   4   5   6   7
+    BIT: 0   1   2   3   4   5   6   7
 */
 
 extern uchar code led7seg_char_code[LED7SEG_CHAR_CODE_WIDTH] = {
