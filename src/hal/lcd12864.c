@@ -69,10 +69,8 @@ void lcd_init(void)
 
 void lcd_clr_screen(void)
 {
-    // fill with 0xFF to clear white;
-    lcd_fill_screen(0xFF);
-    // fill with 0x00 to clear black;
-    lcd_fill_screen(0x00);
+    lcd_fill_screen(0xFF);    // fill with 0xFF to clear white;
+    lcd_fill_screen(0x00);    // fill with 0x00 to clear black;
 }
 
 void lcd_disp_char(uint8_t X, uint8_t Y, uint8_t _size, uchar* strptr)
