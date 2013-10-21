@@ -1,18 +1,18 @@
 /**
  * @file buzzer.c
- * @authro: yinlan
- * @date: Oct 20, 2013
- * @version: v0.1
- * @brief: use buzzer to provide a system wide function: sys_beep
+ * @author
+ * @date Oct 20, 2013
+ * @version 0.1
+ * @brief use buzzer to provide a system wide function: sys_beep
  */
 #include <mcu.h>
 #include <buzzer.h>
 
 /**
- * @function: sys_beep
- * @param: none
- * @return: none
- * @brief: drive the buzzer with 2500Hz 1/2 duty pulse,
+ * @function sys_beep
+ * @param none
+ * @return none
+ * @brief drive the buzzer with 2500Hz 1/2 duty pulse,
  * last for about 60ms
  */
 void sys_beep(void)

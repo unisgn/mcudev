@@ -1,9 +1,9 @@
 /**
- * @file: nrf24l01.c
- * @author: yinlan
- * @date: Oct 20, 2013
- * @version: v0.1
- * @brief: driver for 2.4GHz wireless device NRF24l01
+ * @file nrf24l01.c
+ * @author
+ * @date Oct 20, 2013
+ * @version 0.1
+ * @brief driver for 2.4GHz wireless device NRF24l01
  */
 #include <nrf24l01.h>
 #include <soft_spi.h>
@@ -53,8 +53,8 @@ static byte nrf_write_buf(uint8_t reg, byte* bufPtr, uint8_t bufSize)
 }
 
 /**
- * @function: nrf_config
- * @brief: setup common configuration
+ * @function nrf_config
+ * @brief setup common configuration
  */
 static void nrf_config(void)
 {
@@ -77,8 +77,8 @@ static void nrf_flush_rx(void)
 }    
 
 /**
- * @function: nrf24l01_init
- * @brief: initialize device; 
+ * @function nrf24l01_init
+ * @brief initialize device; 
  * only after init, can now enter either ptx mode or prx mode
  */
 void nrf24l01_init(void)
@@ -91,9 +91,9 @@ void nrf24l01_init(void)
 }
 
 /**
- * @function: nrf24l01_set_ptx_mode
- * @param: none
- * @brief: device can function as either a ptx device or prx device,
+ * @function nrf24l01_set_ptx_mode
+ * @param none
+ * @brief device can function as either a ptx device or prx device,
  * once the ptx mode settled, the device is now ready to tx data packet to a remote target node.
  */
 void nrf24l01_set_ptx_mode(void)
@@ -107,9 +107,9 @@ void nrf24l01_set_ptx_mode(void)
 }
 
 /**
- * @function: nrf24l01_set_prx_mode
- * @param: rx_addr, usually the local ip for the prx device
- * @brief:device can function as either a ptx device or prx device,
+ * @function nrf24l01_set_prx_mode
+ * @param rx_addr, usually the local ip for the prx device
+ * @brief device can function as either a ptx device or prx device,
  * once the prx mode settled, the device is now ready to rx data packet from a remote node.
  */
 void nrf24l01_set_prx_mode(uchar* rx_addr)
@@ -138,11 +138,11 @@ void nrf24l01_clear_irq(void)
 }
 
 /**
- * @function: nrf24l01_tx_packet
- * @param: tx_addr, usually the remote target node ip
- * @param: tx_pld, data packet to be transmitted
- * @return: none
- * @brief: tx a data packet to remote target node
+ * @function nrf24l01_tx_packet
+ * @param tx_addr, usually the remote target node ip
+ * @param tx_pld, data packet to be transmitted
+ * @return none
+ * @brief tx a data packet to remote target node
  */
 void nrf24l01_tx_packet(byte* tx_addr, byte* tx_pld)
 {
