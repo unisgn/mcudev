@@ -12,6 +12,7 @@
 /**
  * @function pcf8591_read_analog
  * @param ch, the given channel number of device
+ * @return the 8-bit analog value
  * @brief read the analog value of a given channel ch
  */
 byte pcf8591_read_analog(uint8_t ch)
