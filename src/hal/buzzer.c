@@ -12,14 +12,14 @@
  * @function sys_beep
  * @param none
  * @return none
- * @brief drive the buzzer with 2500Hz 1/2 duty pulse,
- * last for about 60ms
+ * @brief drive the buzzer with 6250Hz 1/2 duty pulse,
+ * last for about 50ms
  */
 void sys_beep(void)
 {
-    uint16_t count = 300;    // bigger count makes beep last longer;
+    uint16_t count = 625;    // bigger count makes beep last longer;
     while(count--) {
         BUZZER = ~BUZZER;
-        sys_delay_5us(40);
+        sys_delay_5us(16);  // strongest sound @ about 6250Hz
     }
 }
