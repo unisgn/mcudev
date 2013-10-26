@@ -14,7 +14,7 @@ static void uart_init(void)
 {
     SCON = 0x50;
     TMOD |= 0x20;
-    TH1 = 0xFD;		// xtal_freq = 11059200Hz, baudrate = 9600bps;
+    TH1 = 0xFD;		// xtal_freq = 11592000Hz, baudrate = 9600bps;
     TR1 = 1;
 }
 
