@@ -10,7 +10,7 @@
 #include <intrins.h>
 
 
-static void uart_init(void)
+void uart_init(void)
 {
     SCON = 0x50;
     TMOD |= 0x20;
