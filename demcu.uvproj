@@ -32,7 +32,7 @@
           <SFDFile></SFDFile>
           <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
-          <BinPath></BinPath>
+          <BinPath>C:\Program Files\Keil\C51\BIN\</BinPath>
           <IncludePath></IncludePath>
           <LibPath></LibPath>
           <RegisterFilePath></RegisterFilePath>
@@ -305,7 +305,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\src\header</IncludePath>
+              <IncludePath>.\src\mcu;.\src\driver\header;.\src\app\header</IncludePath>
             </VariousControls>
           </C51>
           <Ax51>
@@ -317,7 +317,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\src\mcu;.\src\driver\header;.\src\app\header</IncludePath>
             </VariousControls>
           </Ax51>
           <Lx51>
@@ -376,51 +376,15 @@
         </Group>
         <Group>
           <GroupName>src.widget</GroupName>
-          <Files>
-            <File>
-              <FileName>uart_print.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\widget\uart_print.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>src.protocal</GroupName>
         </Group>
         <Group>
-          <GroupName>src.hal</GroupName>
-          <Files>
-            <File>
-              <FileName>nrf24l01.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\hal\nrf24l01.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>src.hw</GroupName>
-          <Files>
-            <File>
-              <FileName>nrf24l01_hw.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\hw\nrf24l01_hw.c</FilePath>
-            </File>
-            <File>
-              <FileName>soft_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\hw\soft_spi.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>src.mcu</GroupName>
-          <Files>
-            <File>
-              <FileName>mcu.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\mcu\mcu.c</FilePath>
-            </File>
-          </Files>
+        </Group>
+        <Group>
+          <GroupName>src.driver</GroupName>
         </Group>
       </Groups>
     </Target>
