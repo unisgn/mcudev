@@ -8,7 +8,7 @@
 
 static void display_digit(uint8_t digit_index, uint8_t digit)
 {
-    if(digit < NUM_SYS_RADIX) {
+    if(digit_index < LED_ARRAY_QTY && digit < NUM_SYS_RADIX) {
         ls138_encode(LED_ARRAY_QTY - 1 - digit_index);
         LED7SEG_DISP(digit);
         sys_delay_5us(10);
