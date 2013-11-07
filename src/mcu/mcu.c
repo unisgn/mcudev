@@ -20,7 +20,7 @@ void uart_init(void)
 
 
 /**
- ********************************************************************
+ *
  * @function sys_init;
  * @brief initialize system, provide basic system running environment;
  * 
@@ -31,7 +31,7 @@ void uart_init(void)
 /* } */
 
 /**
- *********************************************************************
+ *
  * @function sys_delay_5us;
  * @brief sys_delay provides 3 diffrent level(also magnitude) of delay, which are approx 5us,
  * 1ms, and 1s, use the most approx one to your need;
@@ -48,7 +48,7 @@ void uart_init(void)
 /* } */
 
 /**
- * *******************************************************************
+ *
  * @function sys_delay_1ms;
  * @brief sys_delay provides 3 diffrent level(also magnitude) of delay, which are approx 5us,
  * 1ms, and 1s, use the most approx one to your need;
@@ -67,7 +67,7 @@ void uart_init(void)
 /* } */
 
 /**
- * *****************************************************************
+ *
  * @function sys_delay_1s;
  * @brief sys_delay provides 3 diffrent level(also magnitude) of delay, which are approx 5us,
  * 1ms, and 1s, use the most approx one to your need;
