@@ -17,7 +17,14 @@ static void display_digit(uint8_t digit_index, uint8_t digit)
 
 static uint32_t power(uint8_t number, uint8_t pow)
 {
-    return (uint32_t) ((!pow) ? 1 : (uint32_t) (number * power(number, pow - 1)));
+    //return (uint32_t) ((!pow) ? 1 : (uint32_t) (number * power(number, pow - 1)));
+    uint32_t product = 1;
+    
+    while(pow--) {
+        product *= number;
+    }
+    
+    return product;
 }
 
 static uint8_t get_digit(uint32_t number, uint8_t digit_index)
